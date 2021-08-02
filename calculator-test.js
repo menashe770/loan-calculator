@@ -5,7 +5,7 @@ it('should calculate the monthly rate correctly', function () {
     years: 30,
     rate: 3.5
   };
-  expect(calculateMonthlyPayment(values)).toEqual(1571.66);
+  expect(calculateMonthlyPayment(values)).toEqual('1571.66');
 });
 
 
@@ -15,7 +15,7 @@ it("should return a result with 2 decimal places", function() {
     years: 30,
     rate: 3.5
   };
-  expect(calculateMonthlyPayment(values)).toEqual(0.00);
+  expect(calculateMonthlyPayment(values)).toEqual('0.00');
 });
 
 it("should calculate ridiculously high prices", function() {
@@ -24,5 +24,5 @@ it("should calculate ridiculously high prices", function() {
     years: 30,
     rate: 3.5
   };
-  expect(calculateMonthlyPayment(values)).toEqual(4490446.88);
+  expect(calculateMonthlyPayment(values)).toEqual('4490446.88');
 });
